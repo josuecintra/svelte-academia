@@ -1,3 +1,43 @@
+# Introdução
+
+O propósito deste repositório é servir para o treinamento do framework SvelteKit.
+
+
+--- 
+
+
+Readme from GitHub repositorie creation
+
+# Quick setup — if you’ve done this kind of thing before
+
+HTTPS: https://github.com/josuecintra/svelte-academia.git
+SSH: git@github.com:josuecintra/svelte-academia.git
+
+Get started by [creating a new file](https://github.com/josuecintra/svelte-academia/new/main) or [uploading an existing file](https://github.com/josuecintra/svelte-academia/upload). We recommend every repository include a [README](https://github.com/josuecintra/svelte-academia/new/main?readme=1), [LICENSE](https://github.com/josuecintra/svelte-academia/new/main?filename=LICENSE.md), and [.gitignore](https://github.com/josuecintra/svelte-academia/new/main?filename=.gitignore).
+
+
+## …or create a new repository on the command line
+
+echo "# svelte-academia" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin [https://github.com/josuecintra/svelte-academia.git | git@github.com:josuecintra/svelte-academia.git]
+git push -u origin main
+
+## …or push an existing repository from the command line
+
+git remote add origin [https://github.com/josuecintra/svelte-academia.git | git@github.com:josuecintra/svelte-academia.git]
+git branch -M main
+git push -u origin main
+
+
+---
+
+
+Readme from svelt instalation
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
