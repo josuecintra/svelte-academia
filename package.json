@@ -42,5 +42,11 @@
 		"vite": "^7.0.4",
 		"vitest": "^3.2.3",
 		"vitest-browser-svelte": "^0.1.0"
+	},
+	"dependencies": {
+		"@fontsource-variable/cabin": "^5.2.8",
+		"@fontsource-variable/roboto-condensed": "^5.2.8",
+		"@fontsource/cabin": "^5.2.8",
+		"@fontsource/roboto-condensed": "^5.2.8"
 	}
 }
