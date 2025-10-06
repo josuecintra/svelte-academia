@@ -39,6 +39,8 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "Cabin", sans-serif;
+  background-color: var(--bg);
+  color: white;
 }
 
 /* 6. Improve media defaults */
@@ -72,4 +74,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  font-size: calc(36 / 16 * 1rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+/* Classes */
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }

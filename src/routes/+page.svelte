@@ -1,3 +1,59 @@
-<h1>Welcome to SvelteKit</h1>
-&nbsp;
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+    import imgHome from '$lib/assets/musculacao.jpg';
+
+    console.log(imgHome);
+</script>
+
+<section class="intro" style="background-image: url({imgHome})">
+    <div class="intro__wrapper wrap">
+        <h1>Você está pronto para o desafio?</h1>
+        <p>A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance.</p>
+        <a href="/sobre" class="btn btn-primary">Sobre</a>
+    </div>
+</section>
+
+<style>
+    .intro {
+        min-height: 360px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        align-content: center;
+        justify-content: start;
+        position: relative;
+    }
+
+    .intro::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .intro__wrapper {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    .btn-primary {
+        background-color: #ff5722;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn-primary:hover {
+        background-color: #e64a19;
+    }
+
+    .intro__wrapper {
+        z-index: 1;
+    }
+</style>
