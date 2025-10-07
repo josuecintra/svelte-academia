@@ -1,12 +1,13 @@
 <script>
     import imgHome from '$lib/assets/musculacao.jpg';
+    import icon from '$lib/assets/icon-muscle.png';     // emogi de músculo baixado de https://emoji.aranja.com/
 
     console.log(imgHome);
 </script>
 
 <section class="intro" style="background-image: url({imgHome})">
     <div class="intro__wrapper wrap">
-        <h1>Você está pronto para o desafio?</h1>
+        <h1>Você está pronto para o desafio? <img src="{icon}" alt=""></h1>
         <p>A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance.</p>
         <a href="/sobre" class="btn btn-primary">Sobre</a>
     </div>
@@ -65,5 +66,10 @@
     p {
         font-size: calc(18 / 16 * 1rem);
         margin-top: 16px;
+    }
+
+    img {
+        display: inline;
+        max-width: 36px;
     }
 </style>
