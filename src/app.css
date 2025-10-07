@@ -13,6 +13,7 @@
 
 :root {
     --bg: #121212;
+    --black: #121212;
     --feat: #ff3e00;
 }
 
@@ -59,6 +60,11 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
 /* 9. Improve line wrapping */
 p {
   text-wrap: pretty;
@@ -74,12 +80,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto Condensed', sans-serif;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: calc(36 / 16 * 1rem);
-  line-height: 1.1;
-  margin-bottom: 1rem;
 }
 
 /* Classes */
@@ -87,5 +92,24 @@ h1 {
 .wrap {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px;
+}
+
+.btn {
+  color: white;
+  border: 1px solid #fff;
+  padding: 6px 12 px;
+  border-radius: 4px;
+  transition: 250ms;
+
+  display: inline-block;
+  background-color: var(--feat);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #e63b00;
+  color: var (--black);
+  transition: 125ms;
 }

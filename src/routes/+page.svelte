@@ -55,5 +55,15 @@
 
     .intro__wrapper {
         z-index: 1;
+        max-width: 450px;
+    }
+
+    .btn {
+        margin-top: 24px;
+    }
+
+    p {
+        font-size: calc(18 / 16 * 1rem);
+        margin-top: 16px;
     }
 </style>
