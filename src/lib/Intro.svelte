@@ -1,20 +1,26 @@
 <script>
     import imgMusculacao from '$lib/assets/musculacao.jpg';
+    import imgExercicios from '$lib/assets/exercicios.jpg';
     import iconMuscle from '$lib/assets/icon-muscle.png';     // emogi de músculo baixado de https://emoji.aranja.com/
+    import iconWeight from '$lib/assets/icon-weight.png';
 
     export let title = "Você está pronto<br /> para o desafio?";
     export let content = "A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance.";
     export let btnText = "Sobre";
     export let btnLink;
-    export let img;
+    export let img = "musculacao";
     export let icon;
 
     if (img === 'musculacao') {
         img = imgMusculacao;
+    } else if (img === 'exercicios') {
+        img = imgExercicios;
     }
 
     if (icon === 'muscle') {
         icon = iconMuscle;
+    } else if (icon === 'weight') {
+        icon = iconWeight;
     }
 </script>
 
