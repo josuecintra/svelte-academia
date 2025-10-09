@@ -65,6 +65,11 @@ a {
   text-decoration: none;
 }
 
+nav > ul {
+  list-style: none;
+  padding-left: unset;
+}
+
 /* 9. Improve line wrapping */
 p {
   text-wrap: pretty;
