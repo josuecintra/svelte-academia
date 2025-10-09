@@ -2,9 +2,9 @@
     import imgMusculacao from '$lib/assets/musculacao.jpg';
     import iconMuscle from '$lib/assets/icon-muscle.png';     // emogi de músculo baixado de https://emoji.aranja.com/
 
-    export let title;
-    export let content;
-    export let btnText;
+    export let title = "Você está pronto<br /> para o desafio?";
+    export let content = "A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance.";
+    export let btnText = "Sobre";
     export let btnLink;
     export let img;
     export let icon;
@@ -23,7 +23,9 @@
     <div class="intro__wrapper wrap">
         <h1>{@html title} <img src="{icon}" alt=""></h1>
         <p>{content}</p>
-        <a href="{btnLink}" class="btn btn-primary">{btnText}</a>
+        {#if btnText && btnLink}
+            <a href="{btnLink}" class="btn btn-primary">{btnText}</a>            
+        {/if}
     </div>
 </section>
 

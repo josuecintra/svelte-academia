@@ -2,6 +2,8 @@
 
 O propósito deste repositório é servir para o treinamento do framework SvelteKit.
 
+Foi utilizada a aula [SvelteKit: projeto completo gratuito](https://www.youtube.com/watch?v=1ikFumI2pXc), disponibilizado no canal Artneo no YouTube.
+
 
 --- 
 
