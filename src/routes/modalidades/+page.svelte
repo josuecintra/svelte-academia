@@ -20,3 +20,16 @@
         {/each}
     </div>
 </section>
+
+<style>
+    .modalidades {
+        margin-top: 60px;
+    }
+
+    .modalidades__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+</style>
