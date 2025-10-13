@@ -41,6 +41,7 @@
         position: absolute;
         inset: 0;
         background-color: var(--overlay);
+        border-radius: 16px;
     }
     
     img {
