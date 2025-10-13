@@ -3,17 +3,32 @@
     export let question;
     export let answer;
 
-
+    let isOpen = false;
+    let handleIsOpen = () => {
+        isOpen = !isOpen;
+        // const answerDiv = document.querySelector('.answer');
+        // const icon = document.querySelector('.question :global(svg)');
+        // if(isOpen){
+        //     answerDiv.style.display = 'block';
+        //     icon.style.transform = 'rotate(45deg)';
+        // } else {
+        //     answerDiv.style.display = 'none';
+        //     icon.style.transform = 'rotate(0deg)';
+        // }
+    }
+    // $: console.log(isOpen);  => $: é um reactive statement, roda sempre que uma variável muda
 </script>
 
-<div class="info">
+<div class="info" role="button" on:click={handleIsOpen} on:keydown={handleIsOpen} tabindex="0">
     <div class="question">
         <h3>{question}</h3>
         <IconPlus />
     </div>
-    <div class="answer">
-        <p>{answer}</p>
-    </div>
+    {#if isOpen}
+        <div class="answer">
+            <p>{answer}</p>
+        </div>
+    {/if}
 </div>
 
 <style>
@@ -24,6 +39,7 @@
         padding: 17px 16px;
         /* justify-content: space-between; */
         cursor: pointer;
+        height: 80px;
     }
 
     .question :global(svg){
@@ -33,12 +49,13 @@
         margin-right: 8px;
         fill: var(--subtle);
         transition: transform 0.3s ease;
-
+        flex-shrink: 0; /* Impede que o ícone encolha no redimensionamento da tela */
     }
     .answer{
         padding: 0 16px;
+        border-left: 1px solid var(--feat);
         margin-top: 16px;
-        display: none;
+        margin-bottom: 16px;
     }
 /* 
     .info{

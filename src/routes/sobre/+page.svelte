@@ -44,9 +44,10 @@
         margin-top: 60px;
         /* background-color: var(--gray-100); */
     }
-    /* .faq__wrapper{
+    
+    .faq__wrapper{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-    } */
+    }
 </style>
