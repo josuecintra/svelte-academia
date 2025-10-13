@@ -54,7 +54,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.55);
+        background: var(--overlay);
     }
 
     .intro__wrapper {

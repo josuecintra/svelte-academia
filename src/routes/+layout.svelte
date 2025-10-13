@@ -4,7 +4,8 @@
 	import "@fontsource/roboto-condensed";
 	import "@fontsource/roboto-condensed/700.css";
 	import "@fontsource/cabin";
-	import Menu from '$lib/Header.svelte';
+	import Header from '$lib/Header.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	let { children } = $props();
 </script>
@@ -13,6 +14,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<Menu />
+<Header />
 
 {@render children?.()}
+
+<Footer />

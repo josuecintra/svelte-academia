@@ -60,7 +60,7 @@
     }
 
     .header__nav a:hover {
-        color: #f39c12;
+        color: var(--feat)
     }
 
 
