@@ -1,5 +1,5 @@
 <script>
-    import img from '$lib/assets/crossfit.jpg';
+    import img from '/crossfit.jpg';
 </script>
 
 <footer class="footer">
