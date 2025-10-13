@@ -47,6 +47,7 @@
 		"@fontsource-variable/cabin": "^5.2.8",
 		"@fontsource-variable/roboto-condensed": "^5.2.8",
 		"@fontsource/cabin": "^5.2.8",
-		"@fontsource/roboto-condensed": "^5.2.8"
+		"@fontsource/roboto-condensed": "^5.2.8",
+		"@formkit/auto-animate": "^0.9.0"
 	}
 }

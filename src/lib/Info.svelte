@@ -1,5 +1,7 @@
 <script>
     import IconPlus from "$lib/assets/IconPlus.svelte";
+    import autoAnimate from "@formkit/auto-animate"
+
     export let question;
     export let answer;
 
@@ -19,8 +21,15 @@
     // $: console.log(isOpen);  => $: é um reactive statement, roda sempre que uma variável muda
 </script>
 
-<div class="info" role="button" on:click={handleIsOpen} on:keydown={handleIsOpen} tabindex="0">
-    <div class="question">
+<!-- 
+    Animação de abrir e fechar a resposta
+    https://auto-animate.formkit.com/
+    npm install @formkit/auto-animate
+ -->
+
+<div class="info" role="button" on:click={handleIsOpen} on:keydown={handleIsOpen} tabindex="0" 
+    use:autoAnimate>
+    <div class="question" class:active={isOpen} aria-expanded={isOpen}>
         <h3>{question}</h3>
         <IconPlus />
     </div>
@@ -40,28 +49,41 @@
         /* justify-content: space-between; */
         cursor: pointer;
         height: 80px;
+        transition: 250ms;
+    }
+    
+    .question.active {
+        border-color: var(--feat);
+        transition: 125ms;
     }
 
     .question :global(svg){
-        width: 20px;
-        height: 20px;
         margin-left: auto;
         margin-right: 8px;
         fill: var(--subtle);
-        transition: transform 0.3s ease;
         flex-shrink: 0; /* Impede que o ícone encolha no redimensionamento da tela */
+        transition: 250ms;
+        /* transform: rotate(45deg); */
+        width: 20px;
+        height: 20px;
     }
+
+    .question.active :global(svg){
+        transform: rotate(45deg);
+        transition: 250ms;
+    }
+
     .answer{
         padding: 0 16px;
         border-left: 1px solid var(--feat);
         margin-top: 16px;
         margin-bottom: 16px;
     }
-/* 
     .info{
         border-bottom: 1px solid var(--gray-300);
         padding: 20px 0;
     }
+/* 
     .info:last-child{
         border-bottom: none;
     }
