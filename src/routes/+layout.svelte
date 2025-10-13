@@ -6,6 +6,7 @@
 	import "@fontsource/cabin";
 	import Header from '$lib/Header.svelte';
 	import Footer from '$lib/Footer.svelte';
+	import Credits from '$lib/Credits.svelte';
 
 	let { children } = $props();
 </script>
@@ -14,8 +15,39 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<Header />
 
-{@render children?.()}
+<div class="layout">	
+	<Header />
 
-<Footer />
+	<main class="main">
+		{@render children?.()}
+	</main>
+	
+	<div class="footer__container">
+		<Footer />		
+	</div>
+	
+	<div class="credits__container">		
+		<Credits />		
+	</div>
+</div>
+
+<style>
+	.layout {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	/* .main {
+		flex: 1;
+	} */
+
+	.footer__container {
+		margin-bottom: auto;
+	}
+
+	.credits__container {
+		margin-bottom: -70px;
+	}
+</style>
