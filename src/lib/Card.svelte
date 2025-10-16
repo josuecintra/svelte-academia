@@ -1,8 +1,16 @@
 <script>
+    import { page } from '$app/state';
     export let info;
+
+    let currentPageId = page.route.id;
+
+    console.log(currentPageId);
+
+    // console.log(info);
+
 </script>
 
-<a href="/{info.slug}" class="card">
+<a href="{currentPageId}/{info.slug}" class="card">
     <img src="{info.img}" alt="" width="120" height="120" />
     <h2>{info.name}</h2> 
 </a>
