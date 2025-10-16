@@ -2,6 +2,8 @@
     import { page } from '$app/state';
     import { modalidades } from '$lib/stores';
 
+    import IntroSingle from '$lib/IntroSingle.svelte';
+
 	let modalidade = page.params.slug;
 
     let data = $modalidades.find(m => m.slug === modalidade);
@@ -10,4 +12,4 @@
 
 </script>
 
-<h1>Slug id = {modalidade}</h1>
+<IntroSingle {data} />
