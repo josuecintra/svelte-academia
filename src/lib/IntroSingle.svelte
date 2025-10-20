@@ -3,7 +3,7 @@
     console.log(data);
 </script>
 
-<div class="intro__wrapoer wrapper">
+<div class="intro__wrapper wrapper">
     <div class="intro__content">
         <h2>{data.name}</h2>
         <p>{data.content}</p>
@@ -15,16 +15,12 @@
 </div>
 
 <style>
-    .intro__wrapoer {
+    .intro__wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
         max-height: 360px;
         align-items: center;
-    }
-
-    .intro__content {
-        
     }
 
     .intro__img {

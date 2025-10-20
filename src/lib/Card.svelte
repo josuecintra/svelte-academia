@@ -1,16 +1,20 @@
 <script>
-    import { page } from '$app/state';
     export let info;
 
-    let currentPageId = page.route.id;
+    /**
+     * as linhas abaixo são uma tentativa de pegar a rota atual para montar o link dinâmico
+     * assim como no
+     * <a href="{currentPageId}/{info.slug}"
+     * 
+     * Foram alterados para versão hardcoded por conta da utilização deste componente em outros lugares que não funcionam dinamicamente 
+    */
+    // import { page } from '$app/state';
 
-    console.log(currentPageId);
-
-    // console.log(info);
+    // let currentPageId = page.route.id;
 
 </script>
 
-<a href="{currentPageId}/{info.slug}" class="card">
+<a href="/modalidades/{info.slug}" class="card">
     <img src="{info.img}" alt="" width="120" height="120" />
     <h2>{info.name}</h2> 
 </a>
