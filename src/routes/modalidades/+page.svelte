@@ -3,7 +3,7 @@
 	import Intro from "$lib/Intro.svelte";
     import { modalidades } from "$lib/stores.js"; 
 
-    $: console.log($modalidades);
+    // $: console.log($modalidades);
 </script>
 
 <Intro 

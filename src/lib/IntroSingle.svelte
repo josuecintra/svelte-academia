@@ -1,5 +1,6 @@
 <script>
     export let data;
+    console.log(`\n\nIntroSingle.svelte data line #3:`);
     console.log(data);
 </script>
 
@@ -19,7 +20,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
-        max-height: 360px;
         align-items: center;
     }
 

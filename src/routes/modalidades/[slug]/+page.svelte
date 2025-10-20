@@ -7,11 +7,12 @@
 
 	let modalidade = page.params.slug;
 
-    let data = $modalidades.find(m => m.slug === modalidade);
+    // let data = $modalidades.find(m => m.slug === modalidade);
+    export let data;
     
 </script>
 
-<IntroSingle {data} />
+<IntroSingle data={data} />
 
 <section class="related">
     <div class="related__wrapper wrap">
