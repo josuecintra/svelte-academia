@@ -1,7 +1,7 @@
 <script>
     export let data;
-    console.log(`\n\nIntroSingle.svelte data line #3:`);
-    console.log(data);
+    // console.log(`\n\nIntroSingle.svelte data line #3:`);
+    // console.log(data);
 </script>
 
 <div class="intro__wrapper wrapper">

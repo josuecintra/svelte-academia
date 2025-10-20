@@ -1,5 +1,12 @@
 <script>
     import logo from '$lib/assets/logo.png';
+    import { page } from '$app/state';
+
+    // console.log(`\nHeader.svelte:`);
+    // $: console.log(page);
+    // $: console.log(page.route.id);
+
+    $: current = page.route.id;
 </script>
 
 <header class="header">
@@ -7,9 +14,9 @@
         <img src="{logo}" alt="Academia Local" class="header__logo" />
         <nav class="header__nav">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/modalidades">Modalidades</a></li>
+                <li><a class:active={current === '/'} href="/">Home</a></li>
+                <li><a class:active={current === '/sobre'} href="/sobre">Sobre</a></li>
+                <li><a class:active={current === '/modalidades' || current === '/modalidades/[slug]'} href="/modalidades">Modalidades</a></li>
                 <li><a href="#contato" class="btn header__btn">Contato</a></li>
             </ul>
         </nav>
@@ -66,6 +73,12 @@
 
     .header__nav a:hover {
         color: var(--feat)
+    }
+
+    a.active, 
+    a.active:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--feat);
     }
 
     /* a:not(.btn):hover {
