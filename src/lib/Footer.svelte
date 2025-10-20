@@ -2,7 +2,7 @@
     import img from '/crossfit.jpg';
 </script>
 
-<footer class="footer">
+<footer class="footer" id="contato">
     <div class="footer__wrapper wrap">
         <div class="footer-image">
             <img src={img} alt="" class="footer-image" />

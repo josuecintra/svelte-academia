@@ -4,6 +4,7 @@
     import imgAlongamento from '/alongamento.jpg';
     import iconMuscle from '$lib/assets/icon-muscle.png';     // emogi de músculo baixado de https://emoji.aranja.com/
     import iconWeight from '$lib/assets/icon-weight.png';
+    import { fly } from 'svelte/transition';
 
     export let title = "Você está pronto<br /> para o desafio?";
     export let content = "A Academia Local está pronta para te ajudar a chegar mais longe e alcançar sua melhor performance.";
@@ -30,10 +31,10 @@
 
 <section class="intro" style="background-image: url({img})">
     <div class="intro__wrapper wrap">
-        <h1>{@html title} <img src="{icon}" alt=""></h1>
-        <p>{content}</p>
+        <h1 in:fly={{ y: 12, duration: 125, delay: 125 }}>{@html title} <img src="{icon}" alt=""></h1>
+        <p in:fly={{ y: 12, duration: 250, delay: 250 }}>{content}</p>
         {#if btnText && btnLink}
-            <a href="{btnLink}" class="btn btn-primary">{btnText}</a>            
+            <a href="{btnLink}" class="btn btn-primary" in:fly={{ y: 12, duration: 250, delay: 375 }}>{btnText}</a>            
         {/if}
     </div>
 </section>
