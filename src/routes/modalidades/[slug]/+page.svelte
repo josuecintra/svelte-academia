@@ -4,6 +4,7 @@
 
     import IntroSingle from '$lib/IntroSingle.svelte';
     import Card from '$lib/Card.svelte';
+    import autoAnimate from "@formkit/auto-animate"
 
 	let modalidade = page.params.slug;
 
@@ -18,7 +19,7 @@
     <div class="related__wrapper wrap">
         <h3>Outras modalidades</h3>
 
-        <div class="list">
+        <div class="list" use:autoAnimate>
             {#each $modalidades.filter(m => m.slug !== modalidade) as mod}
                 <Card info={mod} />
             {/each}
