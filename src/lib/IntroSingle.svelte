@@ -46,4 +46,23 @@
         font-size: calc(18 / 16 * 1rem);
         margin-top: 8px;
     }
+
+    @media (max-width: 768px) {
+        .intro__wrapper {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .intro__img {
+            grid-row: 1;
+            margin: -20px;
+        }
+
+        img {
+            width: 100%;
+            height: 240px;
+            border-radius: 8px;
+            object-position: center;
+        }
+    }
 </style>

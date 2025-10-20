@@ -50,4 +50,10 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
     }
+
+    @media (max-width: 768px) {
+        .faq__wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>

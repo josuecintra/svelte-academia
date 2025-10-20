@@ -47,4 +47,10 @@
         border-color: var(--feat);
         transition: 125ms;
     }
+
+    @media (max-width: 768px) {
+        .card {
+            flex-basis: 100%;
+        }
+    }
 </style>

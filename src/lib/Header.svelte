@@ -47,8 +47,13 @@
         max-width: 277px;
     }
 
+    nav {
+        margin-left: auto;
+    }
+
     .header__nav ul {
         display: flex;
+        align-items: center;
         gap: 1.5rem;
     }
 
@@ -63,5 +68,19 @@
         color: var(--feat)
     }
 
+    /* a:not(.btn):hover {
+        text-decoration: underline;
+    } */
+    
+    @media (max-width: 768px) {
+        .header__wrapper {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header__nav ul {
+            margin-left: unset;
+        }
+    }
 
 </style>

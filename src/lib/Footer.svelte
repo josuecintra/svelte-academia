@@ -62,4 +62,11 @@
         display: flex;
         gap: 8px;
     }
+
+    @media (max-width: 768px) {
+        .footer__wrapper {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }  
 </style>
