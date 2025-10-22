@@ -2,6 +2,8 @@
     export let data;
     // console.log(`\n\nIntroSingle.svelte data line #3:`);
     // console.log(data);
+    let img1 = `${data.img} 640w`;  // Example: "image.jpg 640w" já recortada
+    let img2 = `${data.img} 1280w`; // Example: "image.jpg 1280w" já recortada
 </script>
 
 <div class="intro__wrapper wrapper">
@@ -10,7 +12,7 @@
         <p>{data.content}</p>
     </div>
     <div class="intro__img">
-        <img src="{data.img}" alt="{data.name}" />
+        <img src="{data.img}" alt="{data.name}" srcset="{img1}, {img2}" />
     </div>
 
 </div>
