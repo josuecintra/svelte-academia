@@ -1,10 +1,16 @@
 <script>
 	import Card from "$lib/Card.svelte";
 	import Intro from "$lib/Intro.svelte";
+	import Seo from "$lib/Seo.svelte";
     import { modalidades } from "$lib/stores.js"; 
 
     // $: console.log($modalidades);
 </script>
+
+<Seo 
+    title="Modalidades" 
+    description="Explore as diversas modalidades de treino que oferecemos para ajudar você a alcançar seus objetivos de fitness."
+/>
 
 <Intro 
     title="Temos a modalidade certa para você"
